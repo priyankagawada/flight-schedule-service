@@ -9,10 +9,11 @@ import com.training.boot.ms.model.Flight;
 @Component
 public class BootStrapRepository implements CommandLineRunner{
 
+	// injected with Repository
 	
 	private final FlightScheduleRepository repository;
 	
-	
+    // constructor injection	
 	public BootStrapRepository(FlightScheduleRepository repository) {
 		super();
 		this.repository = repository;
@@ -27,7 +28,7 @@ public class BootStrapRepository implements CommandLineRunner{
 		Flight flight3 = new Flight(3L, "UL-193", "DEL", "TYO", "China Southerlines Airlines", "12:30", "14:35" );
 		Flight flight4 = new Flight(4L, "UL-194", "DEL", "TYO", "Srilankan Airlines", "15:10", "18:40" );
 	
-	    repository.save(flight1);
+	    repository.save(flight1); // run the insert query
 	    repository.save(flight2);
 	    repository.save(flight3);
 	    repository.save(flight4);

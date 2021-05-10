@@ -5,8 +5,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+// object of flight mapped as row 
 @Entity
-
 public class Flight {
 
 	@Id
